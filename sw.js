@@ -1,3 +1,4 @@
+if (location.search) {location.replace(location.search.substring(1))}
 const CACHE_NAME = 'text-save-cache-v1.8';
 const DB_NAME = 'text-save';
 const urlsToCache = [
