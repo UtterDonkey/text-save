@@ -8,9 +8,14 @@ document.getElementById('text').value = string;   const textarea = document.getE
 if (location.hash) {
 write(location.hash.substring(1));
 }
-try { 
-    window.opener.postMessage(textarea.value, '*');
-    }
+try{
+var textarea = document.getElementById('text');
+window.opener.postMessage(textarea.value, '*');
+
+}catch(e){
+
+
+}
 const CACHE_NAME = 'text-save-cache-v1.8';
 const DB_NAME = 'text-save';
 const urlsToCache = [
