@@ -1,3 +1,4 @@
+if (location.search) {location.replace(location.search.substring(1))}
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.addEventListener('message', e => {
     if (e.data.reload) {
