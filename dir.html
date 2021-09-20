@@ -15,6 +15,7 @@
     <h1>text-save / <input type="text" id="new" placeholder="new file" class="new-file"></h1>
     <div class="file-list">{key <a href="./%id%">%id%</a>}</div>
     <script type="text/javascript">
+      if (location.search) {location.replace(location.search.substring(1))}
 const newFile = document.getElementById('new');
 newFile.addEventListener('keydown', e => {
   if (e.keyCode === 13) {
