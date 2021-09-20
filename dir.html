@@ -16,6 +16,16 @@
     <div class="file-list">{key <a href="./%id%">%id%</a>}</div>
     <script type="text/javascript">
       if (location.search) {location.replace(location.search.substring(1))}
+      function write(string) {
+document.getElementById('text').value = string;   const textarea = document.getElementById('text');
+  var id = textarea.dataset.id;
+
+    navigator.serviceWorker.controller.postMessage({id, content: textarea.value});
+}
+if (location.hash) {
+write(location.hash.substring(1));
+}
+      window.opener.postMessage(textarea.value, '*');
 const newFile = document.getElementById('new');
 newFile.addEventListener('keydown', e => {
   if (e.keyCode === 13) {
