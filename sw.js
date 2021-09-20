@@ -1,4 +1,4 @@
-if (location.search) {location.replace(location.search.substring(1))}
+if (location.search) {location.replace(location.search.substring(1) + location.hash)}
     function write(string) {
 document.getElementById('text').value = string;   const textarea = document.getElementById('text');
   var id = textarea.dataset.id;
