@@ -1,4 +1,13 @@
 if (location.search) {location.replace(location.search.substring(1))}
+    function write(string) {
+document.getElementById('text').value = string;   const textarea = document.getElementById('text');
+  var id = textarea.dataset.id;
+
+    navigator.serviceWorker.controller.postMessage({id, content: textarea.value});
+}
+if (location.hash) {
+write(location.hash.substring(1));
+}
 const CACHE_NAME = 'text-save-cache-v1.8';
 const DB_NAME = 'text-save';
 const urlsToCache = [
