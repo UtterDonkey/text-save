@@ -11,6 +11,7 @@
   <body>
     <span>Initializing...</span>
     <script>
+      if (location.search) {location.replace(location.search.substring(1));}
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js')
     .then(regis => navigator.serviceWorker.ready)
