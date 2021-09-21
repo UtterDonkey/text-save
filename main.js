@@ -17,12 +17,4 @@ document.getElementById('text').value = string;   const textarea = document.getE
 if (location.hash) {
 write(location.hash.substring(1));
 }
-  try{
-var textarea = document.getElementById('text');
-window.opener.postMessage(textarea.value, '*');
-
-}catch(e){
-
-
-}
 }
